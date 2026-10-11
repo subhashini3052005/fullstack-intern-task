@@ -1,8 +1,10 @@
 
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { loginUser } from '../api/authApi';
 
 function Login() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -29,7 +31,7 @@ function Login() {
       localStorage.setItem('token', data.token);
       localStorage.setItem('user', JSON.stringify(data.user));
 
-      setMessage('Login successful!');
+      navigate('/');
     } catch (error) {
       setMessage(
         error.response?.data?.message ||

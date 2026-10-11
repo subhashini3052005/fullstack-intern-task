@@ -90,6 +90,11 @@ function Register(){
                     {loading ? 'Creating account...': 'Register'}
                 </button>
 
+                <p className="text-center text-gray-600">
+                    Already have an account?{''}
+                    <a href="/login" className="font-semibold text-blue-600 hover:underline">Login</a>
+                </p>
+
             </form>
         </div>
     );

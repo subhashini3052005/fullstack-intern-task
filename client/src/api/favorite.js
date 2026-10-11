@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/favorites';
+const API_URL = 'http://127.0.0.1:5000/api/favorites';
 
 export const getFavorites = async () => {
   const token = localStorage.getItem('token');
